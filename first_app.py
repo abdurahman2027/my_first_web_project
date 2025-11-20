@@ -5,7 +5,7 @@ import os
 st.title('Abdu Rahman First ML App')
 
 def load_model():
-    with open('C:/Users/hp/Desktop/first_app/iris_model.pkl', 'rb') as f: #f is file name
+    with open('iris_model.pkl', 'rb') as f: #f is file name
         model = pickle.load(f)
     return model
 
@@ -38,4 +38,5 @@ flowers = {
 results = iris_model.predict(arr)[0]
 st.write("The predicted result is", label_names[results])
 st.image(flowers[label_names[results]], caption=f"{label_names[results]}", width=400)
+
 
